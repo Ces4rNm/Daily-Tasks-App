@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AgregarTarea">
+
+    <EditText
+        android:id="@+id/etDescripcion"
+        android:layout_width="328dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:ems="10"
+        android:hint="Descripcion"
+        android:inputType="text"
+        android:textColorHighlight="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etFecha"
+        android:layout_width="328dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:ems="10"
+        android:hint="Fecha"
+        android:focusable="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDescripcion" />
+
+
+    <Button
+        android:id="@+id/buttonGuardar"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="164dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="sans-serif"
+        android:onClick="guardar_tarea"
+        android:text="Guardar"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etFecha" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
