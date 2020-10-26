@@ -86,11 +86,6 @@ public class AgregarTarea extends AppCompatActivity {
             InsertTask InsertTask = retrofit.create(InsertTask.class);
 
             // prepare call in Retrofit 2.0
-            try {
-                JSONObject paramObject = new JSONObject();
-                paramObject.put("descripcion", etDescripcion.getText().toString());
-                paramObject.put("fecha", etFecha.getText().toString());
-
                 Call<PostResult> response = InsertTask.insertTask(etDescripcion.getText().toString(), etFecha.getText().toString());
                 response.enqueue(new Callback<PostResult>() {
                     @Override
@@ -107,9 +102,6 @@ public class AgregarTarea extends AppCompatActivity {
                         Log.e("Error", t.getMessage());
                     }
                 });
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
         } else {
             Toast.makeText(this, "Complete todos los campos", Toast.LENGTH_SHORT).show();
         }
