@@ -4,44 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     tools:context=".AgregarTarea">
 
+
     <EditText
-        android:id="@+id/etDescripcion"
+        android:id="@+id/etFecha"
         android:layout_width="328dp"
         android:layout_height="56dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="64dp"
         android:backgroundTint="@color/colorPrimary"
         android:ems="10"
-        android:hint="Descripcion"
-        android:inputType="text"
-        android:textColorHighlight="#FFFFFF"
+        android:focusable="false"
+        android:hint="Fecha"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etFecha"
+        android:id="@+id/etDescripcion"
         android:layout_width="328dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="28dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="36dp"
         android:backgroundTint="@color/colorPrimary"
         android:ems="10"
-        android:hint="Fecha"
-        android:focusable="false"
+        android:gravity="top"
+        android:hint="Descripcion"
+        android:inputType="text|textMultiLine"
+        android:textColorHighlight="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etDescripcion" />
-
+        app:layout_constraintTop_toBottomOf="@+id/etFecha" />
 
     <Button
         android:id="@+id/buttonGuardar"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="164dp"
         android:layout_height="34dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="100dp"
         android:background="@color/colorPrimary"
         android:fontFamily="sans-serif"
         android:onClick="guardar_tarea"
@@ -50,7 +52,8 @@
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etFecha" />
+        app:layout_constraintTop_toBottomOf="@+id/etDescripcion" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

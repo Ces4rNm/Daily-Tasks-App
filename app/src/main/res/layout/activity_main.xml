@@ -4,30 +4,79 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     tools:context=".MainActivity">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="91dp">
+
+
+            <EditText
+                android:id="@+id/etFinicio"
+                android:layout_width="140dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:ems="10"
+                android:focusable="false"
+                android:hint="Fecha Inicio"
+                android:inputType="text"
+                android:textColorHighlight="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.059"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageViewFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:src="@drawable/ic_baseline_filter_list_24"
+                app:layout_constraintEnd_toStartOf="@+id/etFfinal"
+                app:layout_constraintStart_toEndOf="@+id/etFinicio"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/etFfinal"
+                android:layout_width="140dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:ems="10"
+                android:focusable="false"
+                android:hint="Fecha Final"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.94"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ListView
             android:id="@+id/list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingBottom="70dp"
+            android:background="@color/colorAccent"
             android:clipToPadding="false"
+            android:listSelector="@android:color/transparent"
+            android:paddingBottom="70dp"
             android:scrollbarStyle="outsideOverlay"
-            android:transcriptMode="alwaysScroll"
             android:stackFromBottom="true"
-            android:listSelector="@android:color/transparent"/>
-
-    </RelativeLayout>
+            android:transcriptMode="alwaysScroll" />
+    </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
+        android:layout_gravity="bottom|center"
         android:layout_margin="16dp"
         android:onClick="agregar_tarea"
         android:src="@drawable/ic_baseline_add_24"
