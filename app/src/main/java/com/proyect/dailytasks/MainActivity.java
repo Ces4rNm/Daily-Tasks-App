@@ -40,6 +40,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void filtrar_tarea(View v){
+        vibe.vibrate(100);
+        Intent i = new Intent(this, AgregarTarea.class );
+        startActivity(i);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
