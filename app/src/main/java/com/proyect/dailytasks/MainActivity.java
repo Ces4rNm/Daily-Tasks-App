@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void filtrar_tarea(View v){
+
         vibe.vibrate(100);
         Intent i = new Intent(this, AgregarTarea.class );
         startActivity(i);
